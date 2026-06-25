@@ -2,8 +2,8 @@
 title: "推荐软件方案"
 description: ""
 lead: ""
-date: ###### Tue Sep 10 09:17:37 CST 2024
-lastmod: ###### Tue Sep 10 09:17:33 CST 2024
+date: 2024-09-10T09:17:37+08:00
+lastmod: 2024-09-10T09:17:33+08:00
 draft: false
 images: []
 menu:

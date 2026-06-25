@@ -2,8 +2,8 @@
 title: "考核软件推荐方案"
 description: ""
 lead: ""
-date: ###### Mon Sep 9 21:06:14 CST 2024
-lastmod: ###### Mon Sep 9 21:06:16 CST 2024
+date: 2024-09-09T21:06:14+08:00
+lastmod: 2024-09-09T21:06:16+08:00
 draft: false
 images: []
 weight: 300
