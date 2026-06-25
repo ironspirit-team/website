@@ -9,9 +9,7 @@
         </NuxtLink>
         <nav class="nav-links" aria-label="主导航">
           <NuxtLink to="/docs/smartcar/prologue/01-how-to-ask-question/">文档</NuxtLink>
-          <NuxtLink to="/blog/">动态</NuxtLink>
-          <NuxtLink to="/versions/">版本</NuxtLink>
-          <NuxtLink to="/contact/">联系</NuxtLink>
+          <NuxtLink to="/blog/">博客</NuxtLink>
           <a href="https://github.com/ironspirit-team" target="_blank" rel="noopener">GitHub</a>
         </nav>
       </div>

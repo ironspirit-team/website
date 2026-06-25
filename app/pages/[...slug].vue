@@ -5,9 +5,12 @@ const { data: page } = await useAsyncData('page-' + route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 
-const { data: pages } = await useAsyncData('content-navigation', () => {
+const isDocsPage = computed(() => route.path.startsWith('/docs/smartcar'))
+
+const { data: pages } = await useAsyncData('docs-navigation', () => {
   return queryCollection('content')
     .select('path', 'title')
+    .where('path', 'LIKE', '/docs/smartcar%')
     .order('path', 'ASC')
     .all()
 })
@@ -16,19 +19,21 @@ const navGroups = computed(() => {
   const groups = new Map<string, { title: string, items: { path: string, title?: string }[] }>()
 
   for (const item of pages.value || []) {
-    if (item.path === '/') {
+    if (item.path === '/docs/smartcar') {
       continue
     }
 
-    const [, section = '其他', subsection = ''] = item.path.split('/')
-    const key = section === 'docs' && subsection === 'smartcar' ? 'docs-smartcar' : section
-    const title = key === 'docs-smartcar' ? '智能车文档' : section === 'blog' ? '动态' : '页面'
+    const [, , , section = 'overview'] = item.path.split('/')
+    const key = section
+    const title = item.path === `/docs/smartcar/${section}` ? item.title || section : section
 
     if (!groups.has(key)) {
       groups.set(key, { title, items: [] })
     }
 
-    groups.get(key)?.items.push(item)
+    if (item.path !== `/docs/smartcar/${section}`) {
+      groups.get(key)?.items.push(item)
+    }
   }
 
   return [...groups.values()]
@@ -45,18 +50,25 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="content-layout">
-    <aside class="content-nav" aria-label="内容导航">
-      <div v-for="group in navGroups" :key="group.title" class="nav-group">
-        <h2 class="nav-group-title">{{ group.title }}</h2>
+  <main :class="['content-layout', { 'content-layout-single': !isDocsPage }]">
+    <aside v-if="isDocsPage" class="content-nav" aria-label="文档导航">
+      <NuxtLink class="content-nav-home" to="/docs/smartcar/">智能车文档</NuxtLink>
+      <details
+        v-for="group in navGroups"
+        :key="group.title"
+        class="nav-group"
+        :open="group.items.some(item => route.path.startsWith(item.path))"
+      >
+        <summary class="nav-group-title">{{ group.title }}</summary>
         <NuxtLink
           v-for="item in group.items"
           :key="item.path"
           :to="item.path"
+          :class="{ active: route.path === item.path }"
         >
           {{ item.title || item.path }}
         </NuxtLink>
-      </div>
+      </details>
     </aside>
 
     <article class="content-page">
