@@ -23,7 +23,7 @@
 
         <div class="nav-links" :class="{ 'is-open': isMenuOpen }">
           <a class="active" href="#home" @click="scrollToSection">首页</a>
-          <a href="#docs" @click="scrollToSection">文档</a>
+          <a href="/docs" @click="scrollToSection">文档</a>
           <a href="#news" @click="scrollToSection">动态</a>
           <a href="#ai-plus" @click="scrollToSection">AI+</a>
           <a href="#team" @click="scrollToSection">团队结构</a>
