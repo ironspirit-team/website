@@ -281,9 +281,9 @@ const teamItems = [
     lines: ['品牌宣传与内容运营', '资料管理与团队协作']
   },
   {
-    title: '铁人协会',
-    icon: '/assets/icon-association.png',
-    lines: ['校内学生科技协会', '技术交流、活动组织与文化建设']
+    title: 'ROS组',
+    icon: '/assets/icon-ros.png',
+    lines: ['机器人操作系统组', '导航建图与系统集成']
   }
 ]
 
