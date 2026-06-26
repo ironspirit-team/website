@@ -32,6 +32,12 @@ body {
     var(--color-gray-100);
 }
 
+.home-page {
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--color-black);
+}
+
 .main-content {
   background-image: url("/assets/backgrounds/section-bg-repeat-y-seamless-clean.png");
   background-repeat: repeat-y;
@@ -755,6 +761,7 @@ img {
 
 /* 页脚 */
 .site-footer {
+  padding: 0;
   color: var(--color-white);
   background: var(--color-black);
 }
@@ -811,8 +818,9 @@ img {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
-  padding: 16px 24px;
+  padding: 10px 24px 8px;
   font-size: 14px;
+  line-height: 1.2;
   text-align: center;
 }
 
@@ -874,6 +882,11 @@ img {
     display: none;
   }
 
+  .hero::before {
+    width: min(42vw, 320px);
+    height: 42px;
+  }
+
   .about-grid,
   .practice-intro,
   .ai-panel,
@@ -903,6 +916,11 @@ img {
   .hero {
     min-height: 92vh;
     min-height: 92svh;
+  }
+
+  .hero::before {
+    width: min(54vw, 220px);
+    height: 32px;
   }
 
   .hero-content {

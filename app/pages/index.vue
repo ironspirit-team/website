@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-page">
     <SiteHeader brand-text="西南石油大学 铁人战队" />
 
     <main class="main-content">
@@ -26,7 +26,7 @@
             <p>
               西南石油大学 ironSpirit 铁人战队成立于 2015 年，是以工程实践、机器人研发、技术传承与团队协作为核心的学生科技创新团队。团队关注机械结构、嵌入式控制、视觉感知、算法开发与项目运营，致力于在工程实践中积累经验、培养能力。
             </p>
-            <a class="button button-line" href="#practice" @click="scrollToSection">了解更多</a>
+            <a class="button button-line" href="#team" @click="scrollToSection">了解更多</a>
           </div>
         </div>
       </section>
@@ -81,27 +81,6 @@
         </div>
       </section>
 
-      <section id="team" class="section section-anchor">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="section-kicker">TEAM STRUCTURE</p>
-            <h2>团队结构</h2>
-          </div>
-
-          <div class="team-grid">
-            <article v-for="item in teamItems" :key="item.title" class="team-card">
-              <span class="card-icon image-box">
-                <img :src="item.icon" :alt="`${item.title}图标`" @error="markImageMissing">
-              </span>
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.lines[0] }}</p>
-              <p>{{ item.lines[1] }}</p>
-              <span class="card-arrow" aria-hidden="true">→</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="ai-plus" class="section section-anchor">
         <div class="container">
           <div class="section-heading centered">
@@ -119,6 +98,27 @@
             <div class="ai-placeholder image-box" aria-label="AI+ 图片占位">
               <span>assets/ai-plus-placeholder.png</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section section-anchor">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="section-kicker">TEAM STRUCTURE</p>
+            <h2>团队结构</h2>
+          </div>
+
+          <div class="team-grid">
+            <article v-for="item in teamItems" :key="item.title" class="team-card">
+              <span class="card-icon image-box">
+                <img :src="item.icon" :alt="`${item.title}图标`" @error="markImageMissing">
+              </span>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.lines[0] }}</p>
+              <p>{{ item.lines[1] }}</p>
+              <span class="card-arrow" aria-hidden="true">→</span>
+            </article>
           </div>
         </div>
       </section>
@@ -165,8 +165,8 @@
             </div>
             <ul class="contact-list">
               <li><span>邮箱</span><a href="mailto:ironspirit_rm@swpu.edu.cn">ironspirit_rm@swpu.edu.cn</a></li>
-              <li><span>地址</span><p>四川省成都市新都区西南石油大学</p></li>
-              <li><span>交流群</span><p>123456789（QQ群，占位）</p></li>
+              <li><span>地址</span><p>四川省成都市新都区西南石油大学明辨楼C205</p></li>
+              <li><span>交流群</span><p>863606991（QQ）</p></li>
             </ul>
             <a class="button button-solid" href="#">立即报名</a>
           </div>
@@ -207,12 +207,12 @@
 
         <div class="footer-links">
           <h2>Connect</h2>
-          <a href="#">GitHub</a>
-          <a href="#">Bilibili</a>
+          <a href="https://github.com/ironspirit-team" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://space.bilibili.com/2138265818" target="_blank" rel="noopener">Bilibili</a>
           <a href="mailto:ironspirit_rm@swpu.edu.cn">邮箱</a>
         </div>
       </div>
-      <div class="footer-bottom">© 2015-2024 ironSpirit Team. All Rights Reserved.</div>
+      <div class="footer-bottom">© 2015-2026 ironSpirit Team. All Rights Reserved.</div>
     </footer>
   </div>
 </template>
