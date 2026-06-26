@@ -67,14 +67,17 @@
             <div class="practice-block">
               <h3>可参与比赛方向</h3>
               <div class="practice-grid competition-grid">
-                <article
+                <a
                   v-for="item in competitionItems"
                   :key="item.title"
-                  class="practice-card"
+                  class="practice-card competition-card"
+                  :href="item.officialUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <h4>{{ item.title }}</h4>
                   <p>{{ item.description }}</p>
-                </article>
+                </a>
               </div>
             </div>
           </div>
@@ -286,26 +289,32 @@ const practicePlatformItems = [
 const competitionItems = [
   {
     title: 'RoboMasters 机器人大赛',
+    officialUrl: 'https://www.robomaster.com/zh-CN/robo/overview',
     description: '面向机器人系统设计、机械结构、电控控制、视觉识别与团队协作的综合赛事方向。'
   },
   {
     title: '大学生电子设计竞赛',
+    officialUrl: 'https://www.nuedc-training.com.cn/',
     description: '面向电路设计、嵌入式系统、信号处理、电源控制与硬件调试的赛事方向。'
   },
   {
     title: '大学生智能汽车竞赛',
+    officialUrl: 'https://www.smartcar.zone/',
     description: '面向智能车控制、路径识别、传感器应用、嵌入式开发与车辆调试的赛事方向。'
   },
   {
     title: '智能机器人创意大赛',
+    officialUrl: 'https://www.robotcontest.cn/home/homepage',
     description: '面向机器人创意设计、功能实现、系统集成与项目展示的赛事方向。'
   },
   {
     title: '睿抗机器人开发者大赛',
+    officialUrl: 'https://www.raicom.com.cn/',
     description: '面向机器人开发、算法实现、系统控制与工程应用的赛事方向。'
   },
   {
     title: '蓝桥杯信息技术大赛',
+    officialUrl: 'https://dasai.lanqiao.cn/',
     description: '面向程序设计、算法能力、软件开发与信息技术应用的赛事方向。'
   }
 ]
