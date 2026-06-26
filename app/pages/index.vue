@@ -26,7 +26,7 @@
           <a href="/docs/smartcar/" @click="scrollToSection">文档</a>
           <a href="#news" @click="scrollToSection">动态</a>
           <a href="#ai-plus" @click="scrollToSection">AI+</a>
-          <a href="#team" @click="scrollToSection">团队结构</a>
+          <a href="#practice" @click="scrollToSection">实践平台</a>
           <a href="#association" @click="scrollToSection">铁人协会</a>
           <a href="#">GitHub</a>
           <a href="#">Bilibili</a>
@@ -59,7 +59,57 @@
             <p>
               西南石油大学 ironSpirit 铁人战队成立于 2015 年，是以工程实践、机器人研发、技术传承与团队协作为核心的学生科技创新团队。团队关注机械结构、嵌入式控制、视觉感知、算法开发与项目运营，致力于在工程实践中积累经验、培养能力。
             </p>
-            <a class="button button-line" href="#team" @click="scrollToSection">了解更多</a>
+            <a class="button button-line" href="#practice" @click="scrollToSection">了解更多</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice" class="section section-anchor practice-section">
+        <div class="container">
+          <div class="practice-intro">
+            <div class="section-heading">
+              <p class="section-kicker">PRACTICE PLATFORM</p>
+              <h2>实践平台</h2>
+            </div>
+            <div class="practice-lead panel">
+              <p class="lead">
+                从实验室训练到项目实践，从校内科创到赛事参与，构建面向工程能力成长的实践入口。
+              </p>
+              <p>
+                依托实验室实践平台，铁人战队围绕机器人、智能车、嵌入式控制、电子设计与信息技术方向开展项目训练。成员可参与重点开放性实验、创新创业训练项目、科创训练营及铁人战队协会相关活动，并在实践中对接 RoboMasters 机器人大赛、大学生电子设计竞赛、大学生智能汽车竞赛、智能机器人创意大赛、睿抗机器人开发者大赛、蓝桥杯信息技术大赛等竞赛方向。
+              </p>
+            </div>
+          </div>
+
+          <div class="practice-groups">
+            <div class="practice-block">
+              <h3>实践平台入口</h3>
+              <div class="practice-grid">
+                <article
+                  v-for="item in practicePlatformItems"
+                  :key="item.title"
+                  class="practice-card"
+                >
+                  <span class="practice-index">{{ item.index }}</span>
+                  <h4>{{ item.title }}</h4>
+                  <p>{{ item.description }}</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="practice-block">
+              <h3>可参与比赛方向</h3>
+              <div class="practice-grid competition-grid">
+                <article
+                  v-for="item in competitionItems"
+                  :key="item.title"
+                  class="practice-card"
+                >
+                  <h4>{{ item.title }}</h4>
+                  <p>{{ item.description }}</p>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -85,22 +135,6 @@
         </div>
       </section>
 
-      <section id="timeline" class="section section-anchor timeline-section">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="section-kicker">TIMELINE</p>
-            <h2>发展历程</h2>
-          </div>
-
-          <div class="timeline">
-            <div v-for="item in timelineItems" :key="item.year" class="timeline-item">
-              <time>{{ item.year }}</time>
-              <span>{{ item.text }}</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="ai-plus" class="section section-anchor">
         <div class="container">
           <div class="section-heading centered">
@@ -117,6 +151,22 @@
             </div>
             <div class="ai-placeholder image-box" aria-label="AI+ 图片占位">
               <span>assets/ai-plus-placeholder.png</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="section section-anchor timeline-section">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="section-kicker">TIMELINE</p>
+            <h2>发展历程</h2>
+          </div>
+
+          <div class="timeline">
+            <div v-for="item in timelineItems" :key="item.year" class="timeline-item">
+              <time>{{ item.year }}</time>
+              <span>{{ item.text }}</span>
             </div>
           </div>
         </div>
@@ -184,7 +234,7 @@
           <a href="/docs/smartcar/" @click="scrollToSection">文档</a>
           <a href="#news" @click="scrollToSection">动态</a>
           <a href="#ai-plus" @click="scrollToSection">AI+</a>
-          <a href="#team" @click="scrollToSection">团队结构</a>
+          <a href="#practice" @click="scrollToSection">实践平台</a>
           <a href="#association" @click="scrollToSection">铁人协会</a>
         </div>
 
@@ -246,6 +296,56 @@ const timelineItems = [
   { year: '2024', text: '继续探索' }
 ]
 
+const practicePlatformItems = [
+  {
+    index: '01',
+    title: '重点开放性实验',
+    description: '面向学生开放的实验与项目实践入口，可用于基础训练、项目验证与能力提升。'
+  },
+  {
+    index: '02',
+    title: '铁人战队协会',
+    description: '连接校内学生、战队训练与技术交流的组织入口。'
+  },
+  {
+    index: '03',
+    title: '创新创业训练项目',
+    description: '支持成员将技术实践转化为创新项目、作品原型或竞赛方案。'
+  },
+  {
+    index: '04',
+    title: '科创训练营',
+    description: '面向新成员或兴趣成员的科创入门训练与基础能力培养。'
+  }
+]
+
+const competitionItems = [
+  {
+    title: 'RoboMasters 机器人大赛',
+    description: '面向机器人系统设计、机械结构、电控控制、视觉识别与团队协作的综合赛事方向。'
+  },
+  {
+    title: '大学生电子设计竞赛',
+    description: '面向电路设计、嵌入式系统、信号处理、电源控制与硬件调试的赛事方向。'
+  },
+  {
+    title: '大学生智能汽车竞赛',
+    description: '面向智能车控制、路径识别、传感器应用、嵌入式开发与车辆调试的赛事方向。'
+  },
+  {
+    title: '智能机器人创意大赛',
+    description: '面向机器人创意设计、功能实现、系统集成与项目展示的赛事方向。'
+  },
+  {
+    title: '睿抗机器人开发者大赛',
+    description: '面向机器人开发、算法实现、系统控制与工程应用的赛事方向。'
+  },
+  {
+    title: '蓝桥杯信息技术大赛',
+    description: '面向程序设计、算法能力、软件开发与信息技术应用的赛事方向。'
+  }
+]
+
 function updateHeader() {
   isScrolled.value = window.scrollY > 12
 }
@@ -255,6 +355,11 @@ function scrollToSection(event: MouseEvent) {
   const targetId = link.getAttribute('href')
 
   if (!targetId || targetId === '#') {
+    return
+  }
+
+  if (!targetId.startsWith('#')) {
+    isMenuOpen.value = false
     return
   }
 

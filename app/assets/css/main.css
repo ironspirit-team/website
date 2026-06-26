@@ -241,7 +241,7 @@ img {
   background-color: #f4f4f4;
   background-image: url('/images/section-bg-repeat-y-car.png');
   background-repeat: repeat-y;
-  background-size: 100% auto;
+  background-size: max(100%, 1180px) auto;
   background-position: top center;
 }
 
@@ -373,7 +373,7 @@ img {
   background-color: #f4f4f4;
   background-image: url('/images/section-bg-repeat-y-car.png');
   background-repeat: repeat-y;
-  background-size: 100% auto;
+  background-size: max(100%, 1180px) auto;
   background-position: top center;
 }
 
@@ -465,8 +465,9 @@ img {
     max-height: none;
   }
 
-  .docs-page {
-    background-size: auto 900px;
+  .docs-page,
+  .blog-index {
+    background-size: auto clamp(720px, 125vw, 900px);
     background-position: top center;
   }
 
