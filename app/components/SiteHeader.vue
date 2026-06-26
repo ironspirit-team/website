@@ -24,7 +24,7 @@
         <a :class="{ active: isHomePage }" :href="anchorHref('home')" @click="scrollToSection">首页</a>
         <a :class="{ active: route.path.startsWith('/docs') }" href="/docs/smartcar/" @click="scrollToSection">文档</a>
         <a :class="{ active: route.path.startsWith('/blog') }" href="/blog/" @click="scrollToSection">动态</a>
-        <a :href="anchorHref('ai-plus')" @click="scrollToSection">AI+</a>
+        <a :class="{ active: route.path.startsWith('/ai-plus') }" href="/ai-plus" @click="scrollToSection">AI+</a>
         <a :href="anchorHref('practice')" @click="scrollToSection">实践平台</a>
         <a :href="anchorHref('association')" @click="scrollToSection">铁人协会</a>
         <a href="https://github.com/ironspirit-team" target="_blank" rel="noopener" @click="scrollToSection">GitHub</a>

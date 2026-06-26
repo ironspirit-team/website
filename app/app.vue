@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
+const shellBrandText = computed(() => route.path === '/ai-plus' ? '西南石油大学 铁人战队' : '铁人战队-智能车')
 </script>
 
 <template>
@@ -9,7 +10,7 @@ const route = useRoute()
   </div>
   <div v-else class="site-shell">
     <NuxtRouteAnnouncer />
-    <SiteHeader brand-text="铁人战队-智能车" />
+    <SiteHeader :brand-text="shellBrandText" />
     <NuxtPage />
     <footer class="site-footer">
       <div class="section-inner">

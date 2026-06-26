@@ -91,17 +91,21 @@
             <h2>AI+</h2>
           </div>
 
-          <div class="ai-panel panel">
+          <NuxtLink class="ai-panel panel ai-entry-card" to="/ai-plus">
             <div class="ai-copy">
-              <h3>智能化探索预留模块</h3>
+              <h3>AI+ 校内社区入口</h3>
               <p>
-                AI+ 模块用于展示团队在智能感知、辅助开发、数据分析、文档沉淀与训练流程优化等方向的探索。当前内容作为官网预留模块，后续可接入项目介绍、技术文章或演示页面。
+                AI+ 是面向校内同学的 AI 社区建设模块，计划围绕 Vibe Coding、AI Hackathon、AI 工具体验与 AI 创作开发交流等方向开展活动。
               </p>
+              <p>
+                当前 AI+ 作为校内 AI 社区的建设入口，主要用于展示后续可能开展的 Vibe Coding、AI Hackathon、AI 工具分享与 AI 创作开发活动。后续可根据实际活动逐步接入活动报名、作品展示、经验复盘与社区资料沉淀。
+              </p>
+              <span class="button button-solid">进入 AI+ 社区</span>
             </div>
             <div class="ai-placeholder image-box" aria-label="AI+ 图片占位">
               <span>assets/ai-plus-placeholder.png</span>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </section>
 

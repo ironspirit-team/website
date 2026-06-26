@@ -656,6 +656,20 @@ img {
   font-size: 17px;
 }
 
+.ai-copy p + p {
+  margin-top: 12px;
+}
+
+.ai-entry-card {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ai-entry-card .button {
+  margin-top: 22px;
+}
+
 .ai-placeholder {
   position: relative;
   min-height: 260px;
@@ -675,6 +689,327 @@ img {
   font-size: 13px;
   text-align: center;
   word-break: break-all;
+}
+
+.ai-plus-page {
+  padding-top: var(--header-height);
+  background-color: #f4f4f4;
+  background-image: url("/images/section-bg-repeat-y-car.png");
+  background-repeat: repeat-y;
+  background-size: max(100%, 1180px) auto;
+  background-position: top center;
+}
+
+.ai-plus-hero {
+  position: relative;
+  padding: 72px 0 54px;
+  overflow: hidden;
+}
+
+.ai-plus-hero::before {
+  position: absolute;
+  top: var(--header-height);
+  right: 0;
+  width: min(28vw, 420px);
+  height: 44px;
+  content: "";
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
+  background: var(--color-black);
+}
+
+.ai-plus-hero-grid,
+.ai-plus-intro-grid,
+.ai-plus-section-split,
+.ai-signup-card,
+.ai-team-ai-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.ai-plus-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-plus-title-row,
+.ai-signup-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.ai-plus-title-row h1 {
+  margin: 0;
+  color: var(--color-black);
+  font-size: clamp(72px, 11vw, 148px);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.ai-status {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  padding: 0 12px;
+  color: var(--color-black);
+  background: rgba(255, 255, 255, 0.64);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.ai-plus-hero-copy h2 {
+  max-width: 760px;
+  margin: 28px 0 18px;
+  color: var(--color-black);
+  font-size: clamp(30px, 4vw, 54px);
+  line-height: 1.12;
+}
+
+.ai-plus-hero-copy p,
+.ai-plus-panel p,
+.ai-signup-copy p,
+.ai-team-ai-card p,
+.ai-section-lead {
+  margin: 0;
+  color: var(--color-gray-700);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.ai-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.ai-tag-list span {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--color-gray-900);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ai-visual {
+  position: relative;
+  display: flex;
+  min-height: 180px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px dashed rgba(0, 0, 0, 0.24);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(218, 218, 218, 0.46)),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.035) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0 1px, transparent 1px 24px);
+}
+
+.ai-visual span {
+  padding: 0 18px;
+  color: var(--color-gray-500);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.ai-visual small {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  left: 16px;
+  color: var(--color-gray-500);
+  font-size: 12px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.ai-visual-hero,
+.ai-visual-signup,
+.ai-visual-team {
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+}
+
+.ai-visual-format {
+  aspect-ratio: 4 / 3;
+  min-height: 220px;
+}
+
+.ai-visual-card {
+  aspect-ratio: 16 / 10;
+  min-height: 0;
+  margin-bottom: 24px;
+}
+
+.ai-plus-section {
+  padding: 62px 0;
+}
+
+.ai-plus-section-last {
+  padding-bottom: 96px;
+}
+
+.ai-plus-panel,
+.ai-detail-card,
+.ai-format-step,
+.ai-signup-card,
+.ai-community-card,
+.ai-team-ai-card {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(10px);
+}
+
+.ai-plus-panel {
+  padding: 36px;
+}
+
+.ai-direction-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ai-detail-card {
+  min-height: 430px;
+  padding: 24px;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.ai-detail-card:hover,
+.ai-format-step:hover,
+.ai-community-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+}
+
+.ai-card-topline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  color: var(--color-gray-500);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.ai-card-topline i {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  color: var(--color-black);
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+.ai-detail-card h3,
+.ai-format-step h3,
+.ai-community-card h3 {
+  margin: 0 0 12px;
+  color: var(--color-black);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.ai-detail-card p,
+.ai-format-step p,
+.ai-community-card p {
+  margin: 0;
+  color: var(--color-gray-700);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.ai-format-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 30px;
+}
+
+.ai-format-step {
+  min-height: 210px;
+  padding: 28px 24px;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.ai-format-step + .ai-format-step {
+  margin-left: -1px;
+}
+
+.ai-format-step span {
+  display: block;
+  margin-bottom: 26px;
+  color: var(--color-gray-500);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.ai-signup-card,
+.ai-team-ai-card {
+  padding: 42px;
+}
+
+.ai-signup-copy p {
+  margin-top: 18px;
+}
+
+.ai-disabled-button {
+  margin-top: 24px;
+  cursor: not-allowed;
+  opacity: 0.54;
+}
+
+.ai-disabled-button:hover {
+  transform: none;
+}
+
+.ai-section-lead {
+  max-width: 920px;
+  margin: -12px auto 32px;
+  text-align: center;
+}
+
+.ai-community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ai-community-card {
+  min-height: 230px;
+  padding: 24px;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.ai-mini-visual {
+  display: flex;
+  aspect-ratio: 4 / 3;
+  min-height: 86px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  background: rgba(244, 244, 244, 0.78);
+  color: var(--color-gray-500);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
 
 /* 铁人协会 */
@@ -835,7 +1170,8 @@ img {
 @media (max-width: 1180px) {
   .team-grid,
   .practice-grid,
-  .competition-grid {
+  .competition-grid,
+  .ai-direction-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -897,6 +1233,11 @@ img {
   .about-grid,
   .practice-intro,
   .ai-panel,
+  .ai-plus-hero-grid,
+  .ai-plus-intro-grid,
+  .ai-plus-section-split,
+  .ai-signup-card,
+  .ai-team-ai-card,
   .association-panel,
   .join-grid,
   .footer-grid {
@@ -905,8 +1246,28 @@ img {
 
   .team-grid,
   .practice-grid,
-  .competition-grid {
+  .competition-grid,
+  .ai-direction-grid,
+  .ai-community-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-format-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .ai-format-step + .ai-format-step {
+    margin-left: 0;
+  }
+
+  .ai-plus-hero {
+    padding-top: 54px;
+  }
+
+  .ai-plus-hero::before {
+    width: min(42vw, 320px);
+    height: 42px;
   }
 
   .association-icon {
@@ -945,7 +1306,10 @@ img {
 
   .team-grid,
   .practice-grid,
-  .competition-grid {
+  .competition-grid,
+  .ai-direction-grid,
+  .ai-format-flow,
+  .ai-community-grid {
     grid-template-columns: 1fr;
   }
 
@@ -969,6 +1333,41 @@ img {
   .contact-list li {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+
+  .ai-plus-hero::before {
+    width: min(54vw, 220px);
+    height: 32px;
+  }
+
+  .ai-plus-hero,
+  .ai-plus-section {
+    padding: 48px 0;
+  }
+
+  .ai-plus-section-last {
+    padding-bottom: 72px;
+  }
+
+  .ai-plus-panel,
+  .ai-detail-card,
+  .ai-signup-card,
+  .ai-team-ai-card {
+    padding: 26px;
+  }
+
+  .ai-plus-title-row h1 {
+    font-size: clamp(58px, 22vw, 88px);
+  }
+
+  .ai-plus-hero-copy h2 {
+    font-size: clamp(28px, 10vw, 42px);
+  }
+
+  .ai-visual-hero,
+  .ai-visual-signup,
+  .ai-visual-team {
+    min-height: 210px;
   }
 }
 
