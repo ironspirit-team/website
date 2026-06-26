@@ -6,7 +6,7 @@
           <span class="brand-logo image-box">
             <img src="/assets/logo.png" alt="ironSpirit logo" @error="markImageMissing">
           </span>
-          <span class="brand-text">西南石油大学 机甲大师战队</span>
+          <span class="brand-text">西南石油大学 铁人战队</span>
         </a>
 
         <button
@@ -23,7 +23,7 @@
 
         <div class="nav-links" :class="{ 'is-open': isMenuOpen }">
           <a class="active" href="#home" @click="scrollToSection">首页</a>
-          <a href="/docs" @click="scrollToSection">文档</a>
+          <a href="/docs/smartcar/" @click="scrollToSection">文档</a>
           <a href="#news" @click="scrollToSection">动态</a>
           <a href="#ai-plus" @click="scrollToSection">AI+</a>
           <a href="#team" @click="scrollToSection">团队结构</a>
@@ -41,7 +41,7 @@
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
           <span class="hero-logo image-box">
-            <img src="/assets/logo.png" alt="ironSpirit logo" @error="markImageMissing">
+            <img src="/images/home-hero-logo.png" alt="ironSpirit logo" @error="markImageMissing">
           </span>
           <h1>IRONSPIRIT</h1>
           <p class="hero-subtitle">ENGINEERED TO INSPIRE</p>
@@ -171,7 +171,7 @@
       <div class="container footer-grid">
         <div class="footer-brand">
           <span class="footer-logo image-box">
-            <img src="/assets/logo.png" alt="ironSpirit logo" @error="markImageMissing">
+            <img src="/images/footer-logo.png?v=20260626" alt="ironSpirit logo" @error="markImageMissing">
           </span>
           <div>
             <p>西南石油大学 ironSpirit 铁人战队</p>
@@ -181,7 +181,7 @@
 
         <div class="footer-links">
           <h2>Quick Links</h2>
-          <a href="#docs" @click="scrollToSection">文档</a>
+          <a href="/docs/smartcar/" @click="scrollToSection">文档</a>
           <a href="#news" @click="scrollToSection">动态</a>
           <a href="#ai-plus" @click="scrollToSection">AI+</a>
           <a href="#team" @click="scrollToSection">团队结构</a>

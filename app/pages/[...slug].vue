@@ -50,7 +50,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <main :class="['content-layout', { 'content-layout-single': !isDocsPage }]">
+  <main :class="['content-layout', { 'content-layout-single': !isDocsPage, 'docs-page': isDocsPage }]">
     <aside v-if="isDocsPage" class="content-nav" aria-label="文档导航">
       <NuxtLink class="content-nav-home" to="/docs/smartcar/">智能车文档</NuxtLink>
       <details
