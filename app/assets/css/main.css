@@ -40,16 +40,6 @@ img {
   backdrop-filter: blur(18px);
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  width: min(1180px, calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 0.9rem 0;
-}
-
 .brand {
   display: inline-flex;
   align-items: center;
@@ -441,7 +431,6 @@ img {
 }
 
 @media (max-width: 860px) {
-  .header-inner,
   .site-footer .section-inner {
     align-items: flex-start;
     flex-direction: column;

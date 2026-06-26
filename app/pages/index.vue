@@ -1,39 +1,6 @@
 <template>
   <div>
-    <header id="siteHeader" class="site-header" :class="{ 'is-scrolled': isScrolled }">
-      <nav class="navbar" aria-label="主导航">
-        <a class="brand" href="#home" aria-label="返回首页" @click="scrollToSection">
-          <span class="brand-logo image-box">
-            <img src="/assets/logo.png" alt="ironSpirit logo" @error="markImageMissing">
-          </span>
-          <span class="brand-text">西南石油大学 铁人战队</span>
-        </a>
-
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="展开导航"
-          :aria-expanded="String(isMenuOpen)"
-          @click="isMenuOpen = !isMenuOpen"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="nav-links" :class="{ 'is-open': isMenuOpen }">
-          <a class="active" href="#home" @click="scrollToSection">首页</a>
-          <a href="/docs/smartcar/" @click="scrollToSection">文档</a>
-          <a href="#news" @click="scrollToSection">动态</a>
-          <a href="#ai-plus" @click="scrollToSection">AI+</a>
-          <a href="#practice" @click="scrollToSection">实践平台</a>
-          <a href="#association" @click="scrollToSection">铁人协会</a>
-          <a href="#">GitHub</a>
-          <a href="#">Bilibili</a>
-          <a class="nav-join" href="#join" @click="scrollToSection">加入我们</a>
-        </div>
-      </nav>
-    </header>
+    <SiteHeader brand-text="西南石油大学 铁人战队" />
 
     <main class="main-content">
       <section id="home" class="hero section-anchor">
@@ -251,9 +218,6 @@
 </template>
 
 <script setup lang="ts">
-const isScrolled = ref(false)
-const isMenuOpen = ref(false)
-
 const teamItems = [
   {
     title: '机械组',
@@ -346,10 +310,6 @@ const competitionItems = [
   }
 ]
 
-function updateHeader() {
-  isScrolled.value = window.scrollY > 12
-}
-
 function scrollToSection(event: MouseEvent) {
   const link = event.currentTarget as HTMLAnchorElement
   const targetId = link.getAttribute('href')
@@ -359,7 +319,6 @@ function scrollToSection(event: MouseEvent) {
   }
 
   if (!targetId.startsWith('#')) {
-    isMenuOpen.value = false
     return
   }
 
@@ -370,7 +329,6 @@ function scrollToSection(event: MouseEvent) {
   }
 
   event.preventDefault()
-  isMenuOpen.value = false
   target.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
@@ -379,12 +337,4 @@ function markImageMissing(event: Event) {
   image.classList.add('is-missing')
 }
 
-onMounted(() => {
-  updateHeader()
-  window.addEventListener('scroll', updateHeader, { passive: true })
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', updateHeader)
-})
 </script>
