@@ -8,9 +8,20 @@
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
           <span class="hero-logo image-box">
-            <img src="/images/home-hero-logo.png" alt="ironSpirit logo" @error="markImageMissing">
+            <img src="/assets/logo.png" alt="ironSpirit logo" @error="markImageMissing">
           </span>
-          <h1>IRONSPIRIT</h1>
+          <h1 class="hero-title" aria-label="IRONSPIRIT">
+            <span class="hero-title-letter" aria-hidden="true">I</span>
+            <span class="hero-title-letter" aria-hidden="true">R</span>
+            <span class="hero-title-letter" aria-hidden="true">O</span>
+            <span class="hero-title-letter" aria-hidden="true">N</span>
+            <span class="hero-title-letter" aria-hidden="true">S</span>
+            <span class="hero-title-letter" aria-hidden="true">P</span>
+            <span class="hero-title-letter" aria-hidden="true">I</span>
+            <span class="hero-title-letter" aria-hidden="true">R</span>
+            <span class="hero-title-letter" aria-hidden="true">I</span>
+            <span class="hero-title-letter" aria-hidden="true">T</span>
+          </h1>
           <p class="hero-subtitle">ENGINEERED TO INSPIRE</p>
           <p class="hero-meta">EST. 2015</p>
         </div>
