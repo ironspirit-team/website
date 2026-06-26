@@ -1,5 +1,13 @@
+<script setup lang="ts">
+const route = useRoute()
+</script>
+
 <template>
-  <div class="site-shell">
+  <div v-if="route.path === '/'">
+    <NuxtRouteAnnouncer />
+    <NuxtPage />
+  </div>
+  <div v-else class="site-shell">
     <NuxtRouteAnnouncer />
     <header class="site-header">
       <div class="header-inner">
