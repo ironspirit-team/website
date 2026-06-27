@@ -4,7 +4,19 @@
 
     <main class="main-content">
       <section id="home" class="hero section-anchor">
-        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-bg" aria-hidden="true">
+          <video
+            class="hero-bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="/assets/hero-bg.png"
+          >
+            <source :src="heroVideoSrc" type="video/mp4">
+          </video>
+        </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
           <span class="hero-logo image-box">
@@ -236,6 +248,8 @@
 </template>
 
 <script setup lang="ts">
+const heroVideoSrc = '/assets/hero-bg.mp4'
+
 const teamItems = [
   {
     title: '机械组',

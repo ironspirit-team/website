@@ -320,6 +320,14 @@ img {
     linear-gradient(135deg, #eeeeee, #ffffff);
 }
 
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
