@@ -414,14 +414,14 @@ img {
   line-height: 1.9;
 }
 
-/* ── ProsePre 代码块（默认渲染） ── */
+/* ── 代码块 ── */
 .content-page :where(pre) {
   position: relative;
   overflow: auto;
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
   border-radius: 0.6rem;
-  background: #1a1e2b;
+  background: #1c2128;
   color: #e2e8f0;
   font-size: 0.88rem;
   line-height: 1.7;
@@ -431,24 +431,31 @@ img {
     0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
+/* 确保 code 文字可见（Shiki 主题色会优先覆盖） */
+.content-page :where(pre code) {
+  font-family: "Cascadia Code", "JetBrains Mono", "Consolas", "Fira Code", monospace;
+  font-size: inherit;
+  color: #e2e8f0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+
+/* Shiki span：继承父级颜色，不覆盖背景 */
+.content-page :where(pre code span) {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none !important;
+}
+
 /* hover 时显示复制按钮 */
 .content-page :where(pre):hover > .copy-button,
 .mermaid-block:hover > .copy-button {
   opacity: 1;
 }
 
-/* Shiki 生成的 span 继承字体 */
-.content-page :where(pre code),
-.content-page :where(pre code span) {
-  font-family: "Cascadia Code", "JetBrains Mono", "Consolas", "Fira Code", monospace;
-  font-size: inherit;
-  color: inherit;
-  background: none !important;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* ── 复制按钮（DOM 动态注入） ── */
+/* ── 复制按钮 ── */
 pre > .copy-button,
 .mermaid-block > .copy-button {
   position: absolute;
@@ -463,10 +470,11 @@ pre > .copy-button,
   font-family: inherit;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
   z-index: 2;
   backdrop-filter: blur(4px);
   line-height: 1.5;
+  white-space: nowrap;
 }
 
 pre > .copy-button:hover,
@@ -483,16 +491,15 @@ pre > .copy-button.copied,
   background: rgba(22, 30, 25, 0.9);
 }
 
-/* ── Mermaid 图表块 ── */
+/* ── Mermaid 图表（叠加在 pre 内，原始 code 被隐藏） ── */
 .mermaid-block {
-  position: relative;
-  margin: 1.5rem 0;
-  padding: 1.5rem;
-  border-radius: 0.6rem;
-  background: rgba(255, 253, 248, 0.9);
-  border: 1px solid rgba(30, 38, 36, 0.1);
-  box-shadow: 0 4px 24px rgba(48, 40, 28, 0.06);
-  display: flex;
+  overflow: visible !important;
+  padding: 1.5rem !important;
+  background: rgba(255, 253, 248, 0.92) !important;
+  color: #1e2624 !important;
+  border-color: rgba(30, 38, 36, 0.1) !important;
+  box-shadow: 0 4px 24px rgba(48, 40, 28, 0.06) !important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   min-height: 100px;
