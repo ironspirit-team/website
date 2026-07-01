@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const shellBrandText = computed(() => route.path === '/ai-plus' ? '西南石油大学 铁人战队' : '铁人战队-智能车')
+const shellBrandText = computed(() => route.path === '/ai-plus' ? '铁人战队' : '铁人战队-智能车')
 </script>
 
 <template>
@@ -16,6 +16,7 @@ const shellBrandText = computed(() => route.path === '/ai-plus' ? '西南石油�
       <div class="section-inner">
         <span>Copyright (c) Ironspirit</span>
         <span>由 Nuxt Content 驱动</span>
+        <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">蜀ICP备2026004009号-3</a></span>
       </div>
     </footer>
   </div>
