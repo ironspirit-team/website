@@ -11,11 +11,11 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'zh-CN'
       },
-      title: 'ironSpirit 瑗垮崡鐭虫补澶у閾佷汉鎴橀槦',
+      title: 'ironSpirit 西南石油大学铁人战队',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: '瑗垮崡鐭虫补澶у ironSpirit 閾佷汉鎴橀槦瀹樼綉棣栭〉' }
+        { name: 'description', content: '西南石油大学 ironSpirit 铁人战队官方网站' }
       ]
     }
   }
