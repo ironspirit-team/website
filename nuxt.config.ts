@@ -6,6 +6,31 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css', '~/assets/css/style.css'],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
+      preload: [
+        'c',
+        'cpp',
+        'python',
+        'bash',
+        'shell',
+        'json',
+        'yaml',
+        'typescript',
+        'javascript',
+        'html',
+        'css',
+        'markdown',
+        'diff',
+        'makefile',
+        'cmake',
+      ],
+    },
+  },
   app: {
     head: {
       htmlAttrs: {

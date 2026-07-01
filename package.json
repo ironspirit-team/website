@@ -11,6 +11,7 @@
   "dependencies": {
     "@nuxt/content": "^3.14.0",
     "better-sqlite3": "^12.11.1",
+    "mermaid": "^11.16.0",
     "nuxt": "^4.4.8",
     "vue": "^3.5.35",
     "vue-router": "^5.1.0"

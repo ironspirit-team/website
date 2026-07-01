@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: page } = await useAsyncData('page-' + route.path, () => {
+const { data: page } = await useAsyncData('blog-post-' + route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 
@@ -10,13 +10,13 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  title: () => (page.value as any)?.title || '铁人战队·智能车',
-  description: () => (page.value as any)?.description || (page.value as any)?.lead || '铁人战队智能车官方网站',
+  title: () => (page.value as any)?.title || '博客',
+  description: () => (page.value as any)?.description || (page.value as any)?.lead || '',
 })
 </script>
 
 <template>
-  <main class="content-layout content-layout-single">
+  <main class="blog-post-layout">
     <article class="content-page">
       <ContentRenderer v-if="page" :value="page" />
     </article>
