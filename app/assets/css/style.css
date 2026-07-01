@@ -1257,6 +1257,19 @@ img {
   text-align: center;
 }
 
+.footer-icp {
+  margin-left: 12px;
+}
+
+.footer-icp a {
+  color: rgba(255, 255, 255, 0.68);
+  text-decoration: none;
+}
+
+.footer-icp a:hover {
+  color: var(--color-white);
+}
+
 /* 响应式适配 */
 @media (max-width: 1180px) {
   .team-grid,

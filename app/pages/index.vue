@@ -242,7 +242,10 @@
           <a href="mailto:ironspirit_rm@swpu.edu.cn">邮箱</a>
         </div>
       </div>
-      <div class="footer-bottom">© 2015-2026 ironSpirit Team. All Rights Reserved.</div>
+      <div class="footer-bottom">
+        © 2015-2026 ironSpirit Team. All Rights Reserved.
+        <span class="footer-icp"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">蜀ICP备2026004009号-3</a></span>
+      </div>
     </footer>
   </div>
 </template>
