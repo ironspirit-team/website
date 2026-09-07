@@ -192,9 +192,9 @@
               <h2>加入我们</h2>
             </div>
             <ul class="contact-list">
-              <li><span>邮箱</span><a href="mailto:ironspirit_rm@swpu.edu.cn">ironspirit_rm@swpu.edu.cn</a></li>
-              <li><span>地址</span><p>四川省成都市新都区西南石油大学明辨楼C205</p></li>
-              <li><span>交流群</span><p>863606991（QQ）</p></li>
+              <li><span>邮箱</span><a href="mailto:1993996310@qq.com">1158873191@qq.com</a></li>
+              <li><span>地址</span><p>四川省成都市新都区西南石油大学明理楼C205</p></li>
+         <!--     <li><span>交流群</span><p>863606991（QQ）</p></li>  -->
             </ul>
             <a class="button button-solid" href="#">立即报名</a>
           </div>
