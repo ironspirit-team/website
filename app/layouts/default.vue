@@ -38,8 +38,9 @@ const brandText = computed(() => {
         </div>
       </div>
       <div class="footer-bottom">
-        © 2015-2026 ironSpirit Team. All Rights Reserved.
+        <span class="footer-copyright">© 2015-2026 ironSpirit Team. All Rights Reserved.</span>
         <span class="footer-icp"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">蜀ICP备2026004009号-3</a></span>
+        <span class="footer-icp footer-police"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=51011402001156" target="_blank" rel="noopener"><img src="/images/beian-police.png" alt="公安备案图标">川公网安备51011402001156号</a></span>
       </div>
     </footer>
   </div>

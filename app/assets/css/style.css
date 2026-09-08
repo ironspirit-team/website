@@ -1250,6 +1250,11 @@ img {
 }
 
 .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   padding: 10px 24px 8px;
   font-size: 14px;
@@ -1258,7 +1263,7 @@ img {
 }
 
 .footer-icp {
-  margin-left: 12px;
+  margin-left: 0;
 }
 
 .footer-icp a {
@@ -1268,6 +1273,19 @@ img {
 
 .footer-icp a:hover {
   color: var(--color-white);
+}
+
+.footer-police a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.2;
+}
+
+.footer-police img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 /* 响应式适配 */
